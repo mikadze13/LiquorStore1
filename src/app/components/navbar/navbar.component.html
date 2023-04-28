@@ -1,14 +1,18 @@
-<nav>
+<nav [class.hidden]="isNavbarHidden" [ngClass]="{ 'background nav-Scroll': isNavbarScrolled }">
   <div class="container">
     <div class="logo">
       <a routerLink="/home">Logo</a>
     </div>
     <ul class="menu">
-      <li><a routerLink="/home"   aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-      <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-      <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
-      <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      <li><a routerLink="/home" aria-current="page" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"
+          [ngClass]="{'active1':isNavbarScrolled}">Home</a></li>
+      <li><a routerLink="/about" aria-current="page" routerLinkActive="active"
+          [ngClass]="{'fontColor':isNavbarScrolled}">About</a></li>
+      <li><a routerLink="/products" routerLinkActive="active" [ngClass]="{'fontColor':isNavbarScrolled}">Products</a>
+      </li>
+      <li><a routerLink="/blog" routerLinkActive="active" [ngClass]="{'fontColor':isNavbarScrolled}">Blog</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" [ngClass]="{'fontColor':isNavbarScrolled}">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" [ngClass]="{'fontColor':isNavbarScrolled}">Contact</a></li>
     </ul>
     <div class="toggle">
       <i class="fas fa-bars"></i>

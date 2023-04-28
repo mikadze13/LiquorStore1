@@ -1,5 +1,5 @@
 nav {
-  background-color: transparent;
+  background-color: transparent ;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -10,8 +10,14 @@ nav {
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: all .3s ease-in-out;
+} 
+.hidden {
+  display: none;
 }
-
+.background{
+  background-color: white ;
+}
 nav .logo a {
   font-size: 24px;
   font-weight: bold;
@@ -29,7 +35,7 @@ nav ul.menu li {
 }
 
 nav ul.menu li a {
-  color: rgba(255, 255, 255, 0.5);;
+  color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
 
   font-size: 14px;
@@ -43,14 +49,18 @@ nav ul.menu li a {
   opacity: 1 !important;
   transition: all .2s ease-in-out;
 }
-
+.fontColor{
+  color: black !important;
+}
 nav ul.menu li a:hover {
   color: #f00 !important;
 }
 .active {
   color: #fff  !important;
 }
-
+.active1{
+  color: #b7472a !important;
+}
 nav .toggle {
   display: none;
 }
