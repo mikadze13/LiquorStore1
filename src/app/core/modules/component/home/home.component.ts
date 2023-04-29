@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
     const backgroundPosition = -scrollPosition / 3 + 'px';
     this.backgroundPositionY = backgroundPosition;
 
- 
-    if (window.scrollY == 0 ) {
+    console.log(window.scrollY)
+    if (window.scrollY == 300 ) {
       const countyearStop = setInterval(() => {
         this.counter++
         if (this.counter == 115) {
@@ -45,13 +45,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    const observer = new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) {
-        this.startCounter();
-        observer.disconnect();
-      }
-    });
-    observer.observe(this.counterElement.nativeElement);
+    
   }
   startCounter() {
     this.timerId = setInterval(() => {
