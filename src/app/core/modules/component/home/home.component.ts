@@ -1,9 +1,10 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'] 
 })
 export class HomeComponent implements OnInit {
   @ViewChild('counterElement') counterElement!: ElementRef;
@@ -45,7 +46,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    AOS.init()
+    window.addEventListener('load',AOS.refresh)
   }
   startCounter() {
     this.timerId = setInterval(() => {
